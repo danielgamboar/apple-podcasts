@@ -3,19 +3,19 @@ export interface Podcasts {
 }
 
 export interface Feed {
-  author:  Author;
-  entry:   Entry[];
+  author: Author;
+  entry: Entry[];
   updated: Label;
-  rights:  Label;
-  title:   Label;
-  icon:    Label;
-  link:    Link[];
-  id:      Label;
+  rights: Label;
+  title: Label;
+  icon: Label;
+  link: Link[];
+  id: Label;
 }
 
 export interface Author {
   name: Label;
-  uri:  Label;
+  uri: Label;
 }
 
 export interface Label {
@@ -23,17 +23,17 @@ export interface Label {
 }
 
 export interface Entry {
-  "im:name":        Label;
-  "im:image":       IMImage[];
-  summary:          Label;
-  "im:price":       IMPrice;
+  "im:name": Label;
+  "im:image": IMImage[];
+  summary: Label;
+  "im:price": IMPrice;
   "im:contentType": IMContentType;
-  rights?:          Label;
-  title:            Label;
-  link:             Link;
-  id:               ID;
-  "im:artist":      IMArtist;
-  category:         Category;
+  rights?: Label;
+  title: Label;
+  link: Link;
+  id: ID;
+  "im:artist": IMArtist;
+  category: Category;
   "im:releaseDate": IMReleaseDate;
 }
 
@@ -43,15 +43,19 @@ export interface Category {
 
 export interface CategoryAttributes {
   "im:id": string;
-  term:    PurpleLabel;
-  scheme:  string;
-  label:   PurpleLabel;
+  term: PurpleLabel;
+  scheme: string;
+  label: PurpleLabel;
 }
 
-export type PurpleLabel = "Music" | "Music Commentary" | "Music History" | "Music Interviews";
+export type PurpleLabel =
+  | "Music"
+  | "Music Commentary"
+  | "Music History"
+  | "Music Interviews";
 
 export interface ID {
-  label:      string;
+  label: string;
   attributes: IDAttributes;
 }
 
@@ -60,7 +64,7 @@ export interface IDAttributes {
 }
 
 export interface IMArtist {
-  label:       string;
+  label: string;
   attributes?: IMArtistAttributes;
 }
 
@@ -73,14 +77,14 @@ export interface IMContentType {
 }
 
 export interface IMContentTypeAttributes {
-  term:  FluffyLabel;
+  term: FluffyLabel;
   label: FluffyLabel;
 }
 
 export type FluffyLabel = "Podcast";
 
 export interface IMImage {
-  label:      string;
+  label: string;
   attributes: IMImageAttributes;
 }
 
@@ -89,12 +93,12 @@ export interface IMImageAttributes {
 }
 
 export interface IMPrice {
-  label:      IMPriceLabel;
+  label: IMPriceLabel;
   attributes: IMPriceAttributes;
 }
 
 export interface IMPriceAttributes {
-  amount:   string;
+  amount: string;
   currency: Currency;
 }
 
@@ -103,7 +107,7 @@ export type Currency = "USD";
 export type IMPriceLabel = "Get";
 
 export interface IMReleaseDate {
-  label:      Date;
+  label: Date;
   attributes: Label;
 }
 
@@ -112,9 +116,9 @@ export interface Link {
 }
 
 export interface LinkAttributes {
-  rel:   Rel;
+  rel: Rel;
   type?: Type;
-  href:  string;
+  href: string;
 }
 
 export type Rel = "alternate" | "self";

@@ -1,19 +1,15 @@
-import { Link } from 'wouter'
-import Router from './router'
-import { routes } from './router/routes'
+import Router from "./router";
+import Header from "./components/Header";
 
 function App() {
-
   return (
-    <>
-    <div className='flex justify-around '>
-      <Link href={routes.home} className="text-3xl font-bold underline" >Home</Link>
-      <Link href={routes.podcasts.all + "/testing"}>Detail</Link>
+    <div className="m-10">
+      <Header />
+      <main>
+        <Router />
+      </main>
     </div>
-      <Router/>
-
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
