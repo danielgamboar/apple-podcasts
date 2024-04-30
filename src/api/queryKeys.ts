@@ -1,3 +1,3 @@
 export const QUERY_KEYS = {
-  allPodcasts: 'allPodcasts' 
-} as const
+  allPodcasts: "allPodcasts",
+} as const;
