@@ -11,7 +11,7 @@ export default function Card({ id, imageUrl, title, author }: CardProps) {
   return (
     <Link
       href={`${routes.podcasts}/${id}`}
-      className="rounded-sm  shadow-xl p-3"
+      className="rounded-sm mt-12 shadow-xl p-3 hover:cursor-pointer"
     >
       <img
         className="mx-auto -translate-y-12 items-start justify-center rounded-full w-32 h-32"

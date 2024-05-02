@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="m-10">
       <Header />
-      <main>
+      <main className="">
         <Router />
       </main>
     </div>
