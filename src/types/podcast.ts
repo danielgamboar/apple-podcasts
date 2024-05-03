@@ -110,12 +110,10 @@ export interface Link {
 }
 
 export interface LinkAttributes {
-  rel: Rel;
+  rel: string;
   type?: string;
   href: string;
 }
-
-export type Rel = "alternate" | "self";
 
 export interface PodcastDetail {
   resultCount: number;
@@ -123,8 +121,8 @@ export interface PodcastDetail {
 }
 
 export interface Result {
-  wrapperType: WrapperType;
-  kind: Kind;
+  wrapperType: string;
+  kind: string;
   artistId?: number;
   collectionId: number;
   trackId: number;
@@ -166,13 +164,7 @@ export interface Result {
   episodeContentType?: string;
 }
 
-export type Country = "USA";
-
 export interface GenreClass {
   name: string;
   id: string;
 }
-
-export type Kind = "podcast" | "podcast-episode";
-
-export type WrapperType = "track" | "podcastEpisode";
