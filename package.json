@@ -7,13 +7,16 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "format": "biome format ./src/**/*.{js,ts,jsx,tsx} --write"
+    "format": "biome format ./src/**/*.{ts,tsx} --write"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.32.0",
+    "@types/dompurify": "^3.0.5",
+    "dompurify": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "wouter": "^3.1.2"
+    "wouter": "^3.1.2",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.1",

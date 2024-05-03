@@ -6,7 +6,7 @@ export const useGetPodcasts = () => {
   const { data: podcasts, isLoading } = useQuery({
     queryKey: [QUERY_KEYS.allPodcasts],
     queryFn: getAllPodcasts,
-    gcTime: 1000 * 60 * 60 * 24
+    gcTime: 1000 * 60 * 60 * 24,
   });
 
   return {

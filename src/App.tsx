@@ -1,11 +1,11 @@
-import Router from "./router";
-import Header from "./components/Header";
+import { Header } from "./components/Header/Header";
+import { Router } from "./router/Router";
 
 function App() {
   return (
     <div className="m-10">
       <Header />
-      <main className="">
+      <main>
         <Router />
       </main>
     </div>

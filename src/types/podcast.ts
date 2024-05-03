@@ -119,58 +119,58 @@ export type Rel = "alternate" | "self";
 
 export interface PodcastDetail {
   resultCount: number;
-  results:     Result[];
+  results: Result[];
 }
 
 export interface Result {
-  wrapperType:             WrapperType;
-  kind:                    Kind;
-  artistId?:               number;
-  collectionId:            number;
-  trackId:                 number;
-  artistName?:             string;
-  collectionName:          string;
-  trackName:               string;
+  wrapperType: WrapperType;
+  kind: Kind;
+  artistId?: number;
+  collectionId: number;
+  trackId: number;
+  artistName?: string;
+  collectionName: string;
+  trackName: string;
   collectionCensoredName?: string;
-  trackCensoredName?:      string;
-  artistViewUrl:           string;
-  collectionViewUrl:       string;
-  feedUrl:                 string;
-  trackViewUrl:            string;
-  artworkUrl30?:           string;
-  artworkUrl60:            string;
-  artworkUrl100?:          string;
-  collectionPrice?:        number;
-  trackPrice?:             number;
-  collectionHdPrice?:      number;
-  releaseDate:             Date;
+  trackCensoredName?: string;
+  artistViewUrl: string;
+  collectionViewUrl: string;
+  feedUrl: string;
+  trackViewUrl: string;
+  artworkUrl30?: string;
+  artworkUrl60: string;
+  artworkUrl100?: string;
+  collectionPrice?: number;
+  trackPrice?: number;
+  collectionHdPrice?: number;
+  releaseDate: string;
   collectionExplicitness?: string;
-  trackExplicitness?:      string;
-  trackCount?:             number;
-  trackTimeMillis:         number;
-  country:                 string;
-  currency?:               string;
-  primaryGenreName?:       string;
-  artworkUrl600:           string;
-  genreIds?:               string[];
-  genres:                  Array<GenreClass | string>;
-  episodeUrl?:             string;
-  artistIds?:              number[];
-  previewUrl?:             string;
-  closedCaptioning?:       string;
-  shortDescription?:       string;
-  episodeGuid?:            string;
-  description?:            string;
-  artworkUrl160?:          string;
-  episodeFileExtension?:   string;
-  episodeContentType?:     string;
+  trackExplicitness?: string;
+  trackCount?: number;
+  trackTimeMillis: number;
+  country: string;
+  currency?: string;
+  primaryGenreName?: string;
+  artworkUrl600: string;
+  genreIds?: string[];
+  genres: Array<GenreClass | string>;
+  episodeUrl?: string;
+  artistIds?: number[];
+  previewUrl?: string;
+  closedCaptioning?: string;
+  shortDescription?: string;
+  episodeGuid?: string;
+  description?: string;
+  artworkUrl160?: string;
+  episodeFileExtension?: string;
+  episodeContentType?: string;
 }
 
 export type Country = "USA";
 
 export interface GenreClass {
   name: string;
-  id:   string;
+  id: string;
 }
 
 export type Kind = "podcast" | "podcast-episode";

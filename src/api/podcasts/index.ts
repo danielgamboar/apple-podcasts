@@ -1,4 +1,4 @@
-import { PodcastDetail, Podcasts } from "../../types/podcast";
+import type { PodcastDetail, Podcasts } from "../../types/podcast";
 
 export const getAllPodcasts = async (): Promise<Podcasts> => {
   const response = await fetch(
@@ -9,8 +9,12 @@ export const getAllPodcasts = async (): Promise<Podcasts> => {
 };
 
 export const getPodcastById = async (id: string): Promise<PodcastDetail> => {
-  const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://itunes.apple.com/lookup?id=${id}&media=podcast&entity=podcastEpisode&limit=20`)}`)
+  const response = await fetch(
+    `https://api.allorigins.win/get?url=${encodeURIComponent(
+      `https://itunes.apple.com/lookup?id=${id}&media=podcast&entity=podcastEpisode&limit=20`,
+    )}`,
+  );
 
-	const data = await response.json()
-	return data.contents;
-}
+  const data = await response.json();
+  return JSON.parse(data.contents);
+};
